@@ -135,7 +135,7 @@ def check_exception_reboot():
     filter_dic['DefaultItemActivity'] = 'onKeyDown:'
     filter_dic['AndroidRuntime'] = 'DeadSystemException'
     filter_dic['RunInTestII_activity:'] = 'mRebootExceptionTimes = 1'
-    filter_dic['ItemDataMap:'] = 'wait JSON load'
+    filter_dic['ItemDataMap:'] = 'time out'
     #filter_dic['ShutdownThread:'] = 'longPressBehavior=1'
     pass
 
