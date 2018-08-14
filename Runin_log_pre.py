@@ -1,4 +1,6 @@
 import os
+import tarfile
+import time
 from os import getcwd , listdir
 from os.path import join , isfile , isdir
 
@@ -55,9 +57,33 @@ def do_check(file_name_condition, filter_dic):
     str = ''
     file_list = get_all_log(file_name_condition)
     #print ("file_list" + str(file_list))
+    unzip_file(file_list)
+    file_list = get_all_log(file_name_condition)
     for f in file_list:
         str += read_file(f,filter_dic)
     return str
+
+def unzip_file(file_list):
+    zip_file_list = []
+    for file in file_list:
+        if (".tar.gz" in file):
+            #print("tgz file:" + file)
+            tar = tarfile.open(file, "r:gz")
+            dirs = file[:-7]
+            print(dirs)
+            tar.extractall(path = dirs)
+            tar.close
+            pass
+        pass
+    #Delete files that have been extracted
+    # time.sleep(10)
+    # for file_name in file_list:
+    #     if (".tar.gz" in file_name):
+    #         os.remove(file_name)
+    #         pass
+    #     pass
+    #print(zip_file_list)
+    pass
 
 #check test result function +++
 
