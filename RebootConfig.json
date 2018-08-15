@@ -1,0 +1,27 @@
+{
+	"Item":{
+		"reboot_exception":{
+			"tag":{
+				"ItemDataMap:":["time out"],
+				"RunInTestII_activity:":["mRebootExceptionTimes = 1","mRebootExceptionTimes = 2"],
+				"AndroidRuntime":["DeadSystemException"],
+				"DefaultItemActivity":["onKeyDown:"],
+				"interceptKeyBeforeQueueing":["keyCode"],
+				"ADB_SERVICES":["service_to_fd"]
+			},
+			"tag_exception":{
+
+			}
+		},
+		"TPopenshort_exception":{
+			"tag":{
+				"tpOpenShort(): rt:":["result=1"],
+				"isScreenOn:":["true"]
+			},
+			"tag_exception":{
+
+			}
+		}
+
+	}
+}
