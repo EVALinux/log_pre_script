@@ -1,0 +1,20 @@
+{
+	"tag":{
+		"ItemDataMap:":["time out"],
+		"RunInTestII_activity:":["mRebootExceptionTimes = 1"],
+		"AndroidRuntime":["DeadSystemException"],
+		"DefaultItemActivity":["onKeyDown:"],
+		"interceptKeyBeforeQueueing":["keyCode"],
+		"ADB_SERVICES":["service_to_fd"],
+		"java.lang.RuntimeException:":["takePicture failed"],
+		"RuntimeException:":["Fail to connect to camera service"],
+		"BatteryService":["run stop charger", "run start charger"],
+		"HighBatterLevel":"70",
+		"LowBatterLevel":"60"
+	},
+	"tagNot":{
+		"tpOpenShort(): rt:":["result=1"],
+		"isScreenOn:":["true"]
+	},
+	"filename":["main_log_", "logcat-log", "android"]
+}

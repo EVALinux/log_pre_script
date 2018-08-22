@@ -78,8 +78,8 @@ def unzip_file(file_list):
             tar.close
 
 def json_load():
-    print (os.path.join(os.getcwd(),"RebootConfig.json"))
-    f = open(os.path.join(os.getcwd(),"RebootConfig.json"), encoding='utf-8')
+    print (os.path.join(os.getcwd(),"Config.json"))
+    f = open(os.path.join(os.getcwd(),"Config.json"), encoding='utf-8')
     json_file = json.load(f)
     jsonItemConditionAnalysis(json_file)
     f.close()
@@ -94,20 +94,20 @@ def jsonItemConditionAnalysis(Item_list):
             filename.extend(Item_list[Item])
         else :
             print("Item does not exist")
-    HighBatterLevel = int(tag.pop('HighBatterLevel',0))
+    HighBatterLevel = int(tag.pop('HighBatterLevel',100))
     LowBatterLevel = int(tag.pop('LowBatterLevel',0))
 
 def KeywordFilter(line, key):
     for condition in tag[key]:
         if str(condition) in line:
-            print("Yes:" + str(condition))
+            #print("Yes:" + str(condition))
             return True
     return False
 
 def KeywordFilterNot(line, key):
     for condition in tagNot[key]:
         if not(str(condition) in line):
-            print("Not:" + str(condition))
+            #print("Not:" + str(condition))
             return True
     return False
 
